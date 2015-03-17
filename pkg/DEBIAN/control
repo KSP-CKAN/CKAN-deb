@@ -1,0 +1,9 @@
+Package: ckan
+Version: 1.6.5
+Architecture: all
+Essential: no
+Section: games
+Priority: optional
+Depends: mono-complete (>=3.10)
+Maintainer: Michele Ippolito
+Description: Official Comprehensive Kerbal Archive Network client.
