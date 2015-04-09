@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # This script simplifies the installation of ckan on debian systems, like Ubuntu.
 # Please note that it's still very experimental:
