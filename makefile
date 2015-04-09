@@ -8,17 +8,22 @@ all:
 ckan:	
 	@rm ckan*.deb -f
 	@fakeroot dpkg-deb --build ckan/ .
-	@find ckan*.deb -exec lintian {} \;
 
 .PHONY: netkan
 netkan:
 	@rm netkan*.deb -f
 	@fakeroot dpkg-deb --build netkan/ .
-	@find netkan*.deb -exec lintian {} \;
 
 .PHONY: clean
 clean:
-	@echo "Cleaning up..."
 	@find . -name "*~" -delete
 	@rm *.deb -f
 
+.PHONY: check
+check: ckan netkan
+	@echo ""
+	@echo "Running lintian on ckan.deb"
+	@find ckan*.deb -exec lintian {} \;
+	@echo ""
+	@echo "Running lintian on netkan.deb"
+	@find netkan*.deb -exec lintian {} \;
