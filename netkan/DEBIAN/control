@@ -1,9 +1,9 @@
 Package: netkan
 Version: 126
 Architecture: all
-Essential: no
-Section: games
+Section: utils
 Priority: optional
 Depends: mono-complete (>=3.10)
-Maintainer: Michele Ippolito
-Description: Official Comprehensive Kerbal Archive Network metadata authoring tool.
+Maintainer: Michele Ippolito <m.ippolito@outlook.com>
+Description: Official KSP-CKAN metadata authoring tool.
+    Official metadata authoring tool for the Comprehensive Kerbal Archive Network.
